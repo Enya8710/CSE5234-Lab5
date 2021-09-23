@@ -1,0 +1,35 @@
+<h2>Shipping Info</h2>
+<form [formGroup] = "ShippingForm" (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+        <label for = "Name">Name
+            <input id = "Name"type = "text" class="form-control">
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label for = "Address">Address
+            <input id = "Address"type = "text" class="form-control">
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label for = "City">City
+            <input id = "City"type = "text" class="form-control">
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label for = "State">State
+            <input id = "State"type = "text" class="form-control">
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label for = "Zip Code">Zip Code
+            <input id = "Zip Code" type = "text" class="form-control">
+        </label>
+    </div>
+
+    <button routerLink="/payment" class="button" type="submit">Purchase</button>
+    
+</form>
