@@ -1,2 +1,12 @@
-<p>summary works!</p>
-<button routerLink="/confirm" class="button" type="submit">Looks good!</button>
+<h1>Order Summary</h1>
+<hr />
+<div *ngFor="let product of products">
+    <span *ngIf="product.quantity > 0">
+        {{ product.name }}
+        {{ product.price | currency }}
+        {{ product.quantity }}
+    </span>
+</div>
+<h2>Total {{ price | currency }}</h2>
+<button routerLink=".." class="btn btn-secondary">Back</button>
+<button routerLink="/confirm" class="btn btn-primary" type="submit">Complete Order</button>

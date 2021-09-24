@@ -8,26 +8,10 @@ import { FormGroup, FormControl } from '@angular/forms';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
-  QuantityForm = this.formBuilder.group({
-    Quantity: '',
-  });
+export class ProductListComponent {
   products = products;
   constructor(
     private formBuilder: FormBuilder,
   ) { }
 
-  ngOnInit(): void {
-  }
-  onSubmit():void {
-    console.log(products);
-  }
-
-  ngOnDispose(){
-    console.log(products);
-  }
-
-  submit(){
-    console.log(products);
-  }
 }

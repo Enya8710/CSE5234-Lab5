@@ -9,8 +9,9 @@ import { ShippingInfoComponent } from './shipping-info/shipping-info.component';
 import { PaymentInfoComponent } from './payment-info/payment-info.component';
 import { SummaryComponent } from './summary/summary.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ComfirmComponent } from './comfirm/comfirm.component';
+import { ComfirmComponent } from './confirm/confirm.component';
 import { FormsModule } from '@angular/forms';
+import { UtilityService } from './utility.service';
 
 @NgModule({
   declarations: [

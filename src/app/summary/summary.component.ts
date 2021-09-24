@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { products } from '../products';
+import { shipping } from '../shipping';
+import { UtilityService } from '../utility.service';
 
 @Component({
   selector: 'app-summary',
@@ -6,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit {
-
-  constructor() { }
+  products = products;
+  shipping = shipping;
+  price: number;
+  constructor(private utilityService: UtilityService) {
+  this.price = utilityService.getTotalPrice();
+   }
 
   ngOnInit(): void {
   }

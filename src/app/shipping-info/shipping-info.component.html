@@ -1,35 +1,43 @@
-<h2>Shipping Info</h2>
-<form [formGroup] = "ShippingForm" (ngSubmit) = "onSubmit()">
-    <div class="form-group">
-        <label for = "Name">Name
-            <input id = "Name"type = "text" class="form-control">
-        </label>
-    </div>
+<div class="container-fluid">
 
-    <div class="form-group">
-        <label for = "Address">Address
-            <input id = "Address"type = "text" class="form-control">
-        </label>
+    <div class="row">
+        <h1>Shipping Info</h1>
+        <hr />
     </div>
-
-    <div class="form-group">
-        <label for = "City">City
-            <input id = "City"type = "text" class="form-control">
-        </label>
+    <div class="row">
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input id="Name" [(ngModel)]="shipping.name" type="text" class="form-control">
+        </div>
     </div>
-
-    <div class="form-group">
-        <label for = "State">State
-            <input id = "State"type = "text" class="form-control">
-        </label>
+    <div class="row">
+        <div class="form-group">
+            <label for="Address">Address</label>
+            <input id="Address" [(ngModel)]="shipping.address" type="text" class="form-control">
+        </div>
     </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="Address">City</label>
+                <input id="Address" [(ngModel)]="shipping.city" type="text" class="form-control">
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label for = "Zip Code">Zip Code
-            <input id = "Zip Code" type = "text" class="form-control">
-        </label>
+        <div class="col-4">
+            <div class="form-group">
+                <label for="State">State</label>
+                <input id="State" [(ngModel)]="shipping.state" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label for="Zip Code">Zip Code</label>
+                <input id="Zip Code" [(ngModel)]="shipping.zipCode" type="text" class="form-control">
+            </div>
+        </div>
     </div>
-
-    <button routerLink="/payment" class="button" type="submit">Purchase</button>
-    
-</form>
+    <br />
+    <button routerLink=".." class="btn btn-secondary">Back</button>
+    <button routerLink="/payment" class="btn btn-primary">Confirm</button>
+</div>

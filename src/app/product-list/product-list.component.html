@@ -1,16 +1,12 @@
 <h1>My Store</h1>
+<hr />
 <h2>Product List</h2>
-<form #form="ngForm">
-    <div *ngFor="let product of products">
-        <p>
-            {{ product.name }}
-            {{ product.price | currency }}
-            <input name="product-{{product.id}}" [(ngModel)]="product.quantity" id = "Quantity" class="form-control">
-        </p>
-    </div>
-    <button routerLink="/shipping" class="button" (click)="submit()">Purchase</button>
-</form>
 
-    
-    
-    
+<div *ngFor="let product of products">
+    <p>
+        {{ product.name }}
+        {{ product.price | currency }}
+        <input name="product-{{product.id}}" [(ngModel)]="product.quantity" type="number" id="Quantity" class="form-control">
+    </p>
+</div>
+<button routerLink="/shipping" type="button" class="btn btn-secondary">Purchase</button>
