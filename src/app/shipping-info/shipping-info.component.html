@@ -1,35 +1,31 @@
 <h2>Shipping Info</h2>
-<form [formGroup] = "ShippingForm" (ngSubmit) = "onSubmit()">
-    <div class="form-group">
-        <label for = "Name">Name
-            <input id = "Name"type = "text" class="form-control">
-        </label>
+<form #form="ngForm">
+    <div *ngFor="let data of shippingdata">
+        Name
+        <input id = "Name"  type = "text" name="data-{{data.id}}" [(ngModel)]="data.name" class="form-control"> 
     </div>
 
-    <div class="form-group">
-        <label for = "Address">Address
-            <input id = "Address"type = "text" class="form-control">
-        </label>
+    <div *ngFor="let data of shippingdata">
+        Address
+        <input id = "Address"type = "text" name="data-{{data.id}}" [(ngModel)]="data.address" class="form-control">
+        
     </div>
 
-    <div class="form-group">
-        <label for = "City">City
-            <input id = "City"type = "text" class="form-control">
-        </label>
+    <div *ngFor="let data of shippingdata">
+        City
+        <input id = "City"type = "text" name="data-{{data.id}}" [(ngModel)]="data.city"class="form-control">
     </div>
 
-    <div class="form-group">
-        <label for = "State">State
-            <input id = "State"type = "text" class="form-control">
-        </label>
+    <div *ngFor="let data of shippingdata">
+        State
+        <input id = "State"type = "text" name="data-{{data.id}}" [(ngModel)]="data.state"class="form-control">
     </div>
 
-    <div class="form-group">
-        <label for = "Zip Code">Zip Code
-            <input id = "Zip Code" type = "text" class="form-control">
-        </label>
+    <div *ngFor="let data of shippingdata">
+        Zip Code
+        <input id = "Zip Code" type = "text" name="data-{{data.id}}" [(ngModel)]="data.zip"class="form-control">
     </div>
 
-    <button routerLink="/payment" class="button" type="submit">Purchase</button>
+    <button routerLink="/payment" class="button" (click)="submit()">Purchase</button>
     
 </form>

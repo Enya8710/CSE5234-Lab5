@@ -9,9 +9,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  QuantityForm = this.formBuilder.group({
-    Quantity: '',
-  });
+
   products = products;
   constructor(
     private formBuilder: FormBuilder,

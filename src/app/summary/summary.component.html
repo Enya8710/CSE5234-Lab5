@@ -1,2 +1,16 @@
-<p>summary works!</p>
+<h1>Summary</h1>
+<h2>Shipping Information</h2>
+<div *ngFor="let data of shippingdata">
+    <p>Name : {{data.name}}</p>
+    <p>Address : {{data.address}}</p>
+    <p>City : {{data.city}}</p>
+    <p>State : {{data.state}}</p>
+    <p>Zip Code : {{data.zip}}</p>
+</div>
+<h2>Payment Address</h2>
+<div *ngFor="let data of paymentdata">
+    <p>Credit Card Number : {{data.creditcardnumber}}</p>
+    <p>CVV Code : {{data.CVVcode}}</p>
+    <p>Expiration Date : {{data.expirationdate}}</p>
+</div>
 <button routerLink="/confirm" class="button" type="submit">Looks good!</button>
