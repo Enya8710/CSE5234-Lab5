@@ -3,9 +3,11 @@
 <h2>Product List</h2>
 
 <div *ngFor="let product of products">
-    <p>
-        {{ product.name }}
-        {{ product.price | currency }}
+    <img [src]="product.img_src"/>
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price | currency }}</h4>
+    <p> 
+        {{ product.description }}
         <input name="product-{{product.id}}" [(ngModel)]="product.quantity" type="number" id="Quantity" class="form-control">
     </p>
 </div>
