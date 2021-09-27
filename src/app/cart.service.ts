@@ -6,16 +6,14 @@ import { Product, products } from './products';
 })
 export class CartService {
   items: Product[] = [];
+  session_open = false;
 
   addToCart(name: string, quantity: number) {
-    let id = 0;
     this.items.forEach((item) => {
       if(item.name === name){
-        id = item.id;
+        item.quantity += quantity
       }
     })
-    this.items[id].quantity += quantity;
-    console.log(this.items[id], this.items)
   }
 
   getItems() {
@@ -23,16 +21,19 @@ export class CartService {
   }
 
   clearCart() {
-    this.items = [];
-    products.forEach(item => {
-      this.items.push(item);
-    })
+    if(!this.session_open){
+      this.items = [];
+      products.forEach(item => {
+        this.items.push({...item});
+      })
+      this.session_open = true;
+    }
     return this.items;
   }
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.items)
+
   }
 }

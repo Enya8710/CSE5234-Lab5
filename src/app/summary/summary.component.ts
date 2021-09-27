@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
+import { payment } from '../payment';
 import { products } from '../products';
 import { shipping } from '../shipping';
 import { UtilityService } from '../utility.service';
@@ -11,12 +13,16 @@ import { UtilityService } from '../utility.service';
 export class SummaryComponent implements OnInit {
   products = products;
   shipping = shipping;
+  payment = payment;
   price: number;
-  constructor(private utilityService: UtilityService) {
-  this.price = utilityService.getTotalPrice();
-   }
+  constructor(private utilityService: UtilityService, private cartService: CartService) {
+    this.price = utilityService.getTotalPrice();
+    cartService.session_open = false;
+    this.products = cartService.items;
+  }
 
   ngOnInit(): void {
   }
+
 
 }

@@ -1,5 +1,6 @@
 <h1>Shopping Cart</h1>
 <hr />
+<button routerLink="/" type="button" class="btn btn-secondary">Product List</button>
 <div *ngFor="let product of items">
     <img [src]="product.img_src"/>
     <h3>{{ product.name }}</h3>
