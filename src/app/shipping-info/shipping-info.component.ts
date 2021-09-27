@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Product, products } from '../products';
 import { FormBuilder } from '@angular/forms';
-import { FormGroup, FormControl } from '@angular/forms';
-import {Shipping, shippingdata} from '../shipping';
+import { shipping } from '../shipping';
+
 @Component({
   selector: 'app-shipping-info',
   templateUrl: './shipping-info.component.html',
   styleUrls: ['./shipping-info.component.css']
 })
 export class ShippingInfoComponent implements OnInit {
-  
-  shippingdata = shippingdata;
+
+  shipping = shipping;
+
   constructor(
     private formBuilder: FormBuilder,
   ) { }

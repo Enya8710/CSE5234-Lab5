@@ -1,15 +1,12 @@
 export interface Payment {
-    id: number;
-    creditcardnumber: string;
-    expirationdate: string;
-    CVVcode: string;
+    creditCardNumber: string,
+    expirationDate: string,
+    cvvCode: string
 }
 
-export const paymentdata  = [
-    {
-        id:1,
-        creditcardnumber: '',
-        expirationdate: '',
-        CVVcode: ''
-    }
-];
+export const payment: Payment = {
+    creditCardNumber: "",
+    expirationDate: "",
+    cvvCode: ""
+}
+

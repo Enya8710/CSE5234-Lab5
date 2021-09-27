@@ -1,21 +1,20 @@
 export interface Shipping {
-    id: number;
     name: string;
-    // [name: string]:any;
     address: string;
     city: string;
     state: string;
-    zip: string;
+    zipCode: string;
+    email: string;
+    shipping_method: string;
 }
 
-export const shippingdata = [
-    {
-        id : 1,
-        name : "",
-        address: "",
-        city: "",
-        state: "",
-        zip: ""
-    }
-];
-// let data: shippingdata = {};
+export const shipping: Shipping = {
+    name: "",
+    address: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    email: "",
+    shipping_method: "",
+}
+

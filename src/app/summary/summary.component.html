@@ -1,16 +1,32 @@
-<h1>Summary</h1>
-<h2>Shipping Information</h2>
-<div *ngFor="let data of shippingdata">
-    <p>Name : {{data.name}}</p>
-    <p>Address : {{data.address}}</p>
-    <p>City : {{data.city}}</p>
-    <p>State : {{data.state}}</p>
-    <p>Zip Code : {{data.zip}}</p>
+
+<h1>Order Summary</h1>
+<hr />
+<h3>You Purchased:</h3>
+<div *ngFor="let product of products">
+    <span *ngIf="product.quantity > 0" >
+        {{ product.name }}
+        {{ product.price | currency }}
+        {{ product.quantity }}
+    </span>
 </div>
-<h2>Payment Address</h2>
-<div *ngFor="let data of paymentdata">
-    <p>Credit Card Number : {{data.creditcardnumber}}</p>
-    <p>CVV Code : {{data.CVVcode}}</p>
-    <p>Expiration Date : {{data.expirationdate}}</p>
+<h2>Total {{ price | currency }}</h2>
+<div>
+    <h3>Shipping Info</h3>
+    <p><strong>Name: </strong>{{shipping.name}}</p>
+    <p><strong>Address: </strong>{{shipping.address}}</p>
+    <p><strong>City: </strong>{{shipping.city}}</p>
+    <p><strong>State: </strong>{{shipping.state}}</p>
+    <p><strong>Zip Code: </strong>{{shipping.zipCode}}</p>
+    <p><strong>Email: </strong>{{shipping.email}}</p>
+    <p><strong>Shipping Method: </strong>{{shipping.shipping_method}}</p>
 </div>
-<button routerLink="/confirm" class="button" type="submit">Looks good!</button>
+<div>
+    <h3>Payment Info</h3>
+    <p><strong>Credit Card Number: </strong>{{payment.creditCardNumber}}</p>
+    <p><strong>Expiration Date: </strong>{{payment.expirationDate}}</p>
+    <p><strong>CVV: </strong>{{payment.cvvCode}}</p>
+</div>
+<h5>Order EPL-2352-NZ has been sent!</h5>
+<button routerLink=".." class="btn btn-secondary">Back</button>
+<button routerLink="/confirm" class="btn btn-primary" type="submit">Complete Order</button>
+

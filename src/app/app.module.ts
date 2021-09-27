@@ -9,8 +9,10 @@ import { ShippingInfoComponent } from './shipping-info/shipping-info.component';
 import { PaymentInfoComponent } from './payment-info/payment-info.component';
 import { SummaryComponent } from './summary/summary.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ComfirmComponent } from './comfirm/comfirm.component';
+import { ComfirmComponent } from './confirm/confirm.component';
 import { FormsModule } from '@angular/forms';
+import { UtilityService } from './utility.service';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     PaymentInfoComponent,
     SummaryComponent,
     ProductListComponent,
-    ComfirmComponent
+    ComfirmComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { FormsModule } from '@angular/forms';
       { path: 'payment', component: PaymentInfoComponent },
       { path: 'summary', component: SummaryComponent },
       { path: 'confirm', component: ComfirmComponent },
+      { path: 'cart', component: CartComponent},
     ])
   ],
   providers: [],
