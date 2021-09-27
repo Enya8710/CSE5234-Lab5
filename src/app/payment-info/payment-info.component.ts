@@ -18,5 +18,6 @@ export class PaymentInfoComponent {
   ) {
     this.price = this.utilityService.getTotalPrice();
   }
+  
 
 }

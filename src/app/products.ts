@@ -9,7 +9,7 @@ export interface Product {
   
   export const products = [
     {
-      id: 1,
+      id: 0,
       name: 'Aoenium',
       price: 7.99,
       description:
@@ -19,7 +19,7 @@ export interface Product {
       
     },
     {
-      id: 2,
+      id: 1,
       name: 'Kalanchoe',
       price: 6.99,
       description:
@@ -28,7 +28,7 @@ export interface Product {
       img_src: "assets/imgs/kalanchoe.jpg"
     },
     {
-      id: 3,
+      id: 2,
       name: 'Senecio',
       price: 2.99,
       description: 'Senecio is a genus of flowering plants that contains more than 1000 species of groundsels, ragworts, and dusty miller.',
@@ -36,7 +36,7 @@ export interface Product {
       img_src: "assets/imgs/senecio.jpg"
     },
     {
-      id: 4,
+      id: 3,
       name: 'Sempervivum',
       price: 6.35,
       description: 'Sempervivum is a genus of about 40 species of flowering plants that are commonly known as Houseleeks or Hen and Chicks.',
@@ -44,7 +44,7 @@ export interface Product {
       img_src: "assets/imgs/sempervivum.jpg"
     },
     {
-      id: 5,
+      id: 4,
       name: 'Crassula',
       price: 7.49,
       description: 'Crassula is a genus of succulent plants that includes more than 350 species native to many different parts of the world.',

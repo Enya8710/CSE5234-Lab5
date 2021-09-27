@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { CartService } from './cart.service';
 import { Product, products } from './products';
 import { shipping } from './shipping';
 
@@ -7,11 +8,11 @@ import { shipping } from './shipping';
 })
 export class UtilityService {
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   getTotalPrice(){
       let price = 0;
-      products.forEach((product, index) => {
+      this.cartService.items.forEach((product) => {
           price += product.price * product.quantity;
       });
       return price;

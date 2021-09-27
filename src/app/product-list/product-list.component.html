@@ -2,6 +2,8 @@
 <hr />
 <h2>Product List</h2>
 
+
+<button routerLink="/cart" type="button" class="btn btn-secondary">Shopping Cart</button>
 <div *ngFor="let product of products">
     <img [src]="product.img_src"/>
     <h3>{{ product.name }}</h3>
@@ -10,5 +12,6 @@
         {{ product.description }}
         <input name="product-{{product.id}}" [(ngModel)]="product.quantity" type="number" id="Quantity" class="form-control">
     </p>
+    <button (click)="addToCart(product)" class="btn btn-secondary">Buy</button>
 </div>
 <button routerLink="/shipping" type="button" class="btn btn-secondary">Purchase</button>
