@@ -9,7 +9,9 @@ import { CartService } from '../cart.service';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
+
 export class ProductListComponent {
+
   products = products;
   constructor(
     private formBuilder: FormBuilder,

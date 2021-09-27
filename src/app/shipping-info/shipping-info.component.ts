@@ -9,16 +9,19 @@ import { shipping } from '../shipping';
   styleUrls: ['./shipping-info.component.css']
 })
 export class ShippingInfoComponent implements OnInit {
+
   shipping = shipping;
+
   constructor(
     private formBuilder: FormBuilder,
-  ) { 
-    console.log(products);
-  }
+  ) { }
 
   ngOnInit(): void {
   }
   onSubmit():void {
+
+  }
+  submit():void{
 
   }
 

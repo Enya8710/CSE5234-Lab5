@@ -17,3 +17,4 @@ export const shipping: Shipping = {
     email: "",
     shipping_method: "",
 }
+

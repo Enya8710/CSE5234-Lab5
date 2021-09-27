@@ -9,3 +9,4 @@ export const payment: Payment = {
     expirationDate: "",
     cvvCode: ""
 }
+
